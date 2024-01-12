@@ -1,7 +1,7 @@
 {
   "name": "simple-otp-generator",
-  "version": "0.0.5",
-  "description": "A package to generate OTP",
+  "version": "0.0.6",
+  "description": "A package to generate OTP and Password",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -16,7 +16,11 @@
     "OTP",
     "otp",
     "otpgenerator",
-    "OTP-generator"
+    "OTP-generator",
+    "PASSWORD",
+    "password",
+    "passwordgenerator",
+    "Password-generator"
   ],
   "author": "Aakash Mukherjee",
   "license": "MIT",
