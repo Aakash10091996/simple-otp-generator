@@ -32,12 +32,12 @@ console.log('Generated OTP (length 8):', otp3);
 ```
 import { generatePassword } from 'simple-otp-generator';
 
-// Default length is 4
+// Default length is 6
 const password1 = generatePassword();
 console.log('Generated Password (default length):', password1);
 
 // Specify length as an option
-const password2 = generatePassword({ length: 6 });
+const password2 = generatePassword({ length: 8 });
 console.log('Generated Password (length 6):', password2);
 
 // Provide length directly (backward compatible)
