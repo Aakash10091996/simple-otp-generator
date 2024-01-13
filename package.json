@@ -1,6 +1,6 @@
 {
   "name": "simple-otp-generator",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "A package to generate OTP and Password",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -28,9 +28,5 @@
     "@types/node": "^20.10.8",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "crypto": "^1.0.1",
-    "uninstall": "^0.0.0"
   }
 }
