@@ -25,7 +25,7 @@ export function generateOTP(options: OtpGeneratorProps={length: 4}): string {
     return otp;
 }
 
-export function generatePassword(options: PasswordGenertorProps={length: 4}): string {
+export function generatePassword(options: PasswordGenertorProps={length: 6}): string {
     let length: number;
 
     if (typeof options === 'number') {
@@ -40,12 +40,27 @@ export function generatePassword(options: PasswordGenertorProps={length: 4}): st
         throw new Error('Length should be of type number');
     }
 
-    let alphabets = 'abcdefghijklmnopqrstuvwxyz';
-    let password = '';
-
-    for (let i = 0; i < length; i++) {
-        password += alphabets[Math.floor(Math.random() * 10)];
+    const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+    const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numericChars = "0123456789";
+    const specialChars = "!@#$%^&*_";
+  
+    const randomNumericChar = numericChars.charAt(Math.floor(Math.random() * numericChars.length));
+    const randomSpecialChar = specialChars.charAt(Math.floor(Math.random() * specialChars.length));
+  
+    const remainingLength = length - 2;
+    const allChars = lowercaseChars + uppercaseChars + numericChars + specialChars;
+    let password = randomNumericChar + randomSpecialChar;
+  
+    for (let i = 0; i < remainingLength; i++) {
+      const randomIndex = Math.floor(Math.random() * allChars.length);
+      password += allChars.charAt(randomIndex);
     }
-
+  
+    // Shuffle the password characters
+    password = password.split('').sort(() => Math.random() - 0.5).join('');
+  
     return password;
 }
+
+generatePassword();
