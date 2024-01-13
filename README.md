@@ -51,6 +51,6 @@ console.log('Generated Password (length 8):', password3);
 ```
 length (optional)
 Type: number
-Default: 4
+Default: 4 for OTP generator and 6 for Password generator
 Description: The length of the generated OTP or Password.
 ```
