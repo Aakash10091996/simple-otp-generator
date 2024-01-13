@@ -63,4 +63,3 @@ export function generatePassword(options: PasswordGenertorProps={length: 6}): st
     return password;
 }
 
-generatePassword();
